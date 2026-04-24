@@ -4,7 +4,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
   const formData = new FormData();
   formData.append("resumeFile", file);
 
-  const response = await fetch("/convert", {
+  const response = await fetch("https://resume-ats-converter.vercel.app/convert", {
     method: "POST",
     body: formData
   });
